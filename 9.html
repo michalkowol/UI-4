@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <title>Title</title>
+    <script src="node_modules/lodash/lodash.js"></script>
+</head>
+<body>
+
+<h2>Agenda</h2>
+<ul>
+    <li>composing functions</li>
+    <li>Example square and negate compose</li>
+    <li>Partial: example of map age</li>
+    <li>Example: hasAll keys</li>
+</ul>
+
+<h2>Exercises</h2>
+
+<ol>
+    <li>Write function atTruthy, it should return only truthy values from object</li>
+    <li>Write a function which will produce multiplyBy function it multiplies by specified number</li>
+    <li>Write a function which lists lodash functions starting with provided letter or string</li>
+
+    <li>Write function where you get sum of age of people sumAge</li>
+    <li>Write function where you get sum of any property of people - createSumOf</li>
+    <li>Write function where you get sum of any property of people, specifying filter on values - use 'houses' to verify</li>
+</ol>
+
+
+<script>
+    function square(a) {
+        return a * a;
+    }
+
+    function negate(a) {
+        return - a;
+    }
+
+    var squareAndNegate = _.flow(square, negate);
+
+    console.log(squareAndNegate(10));
+
+    var getAges = _.partial(_.map, _, 'age');
+
+    $.ajax('http://localhost:4321/data')
+            .done(function (result) {
+                console.log(getAges(result));
+            });
+</script>
+</body>
+</html>
