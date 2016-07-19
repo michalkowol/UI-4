@@ -17,9 +17,10 @@
 <h2>Exercises</h2>
 
 <ol>
-    <li>Write a program which will fetch some weather data: https://query.yahooapis.com/v1/public/yql?format=json&rnd=20166210&diagnostics=true&q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text="Warszawa,%20Poland")%20and%20u="c"&_=1468915215957
+    <li>Write a program which will fetch some weather data:
+        https://query.yahooapis.com/v1/public/yql?format=json&rnd=20166210&diagnostics=true&q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text="Warszawa,%20Poland")%20and%20u="c"&_=1468915215957
         and add some data for each day to a list with class 'weather'.
-        Add event on click to each element of the list to change background color before ajax call.
+        <b>Add event on click to each element of the list to change background color before ajax call.</b>
     </li>
     <li>Run node app: node ajax.js</li>
     <li>Write a function which will fetch data from both: /1 and /2 endpoints and print the concatenated result</li>
